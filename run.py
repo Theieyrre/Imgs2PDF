@@ -1,11 +1,29 @@
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+import sys, os
+from glob import glob
 
-def add_image(image_path):
-    my_canvas = canvas.Canvas("canvas_image.pdf", pagesize=letter)
-    my_canvas.drawImage(image_path, x=0, y=0)
-    my_canvas.save()
+from tqdm import tqdm
+from reportlab.lib.pagesizes import A4
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import mm
+
+
+def main():
+    path = sys.argv[1]
+    filename = sys.argv[2]
+    c = canvas.Canvas(filename, pagesize=A4)
+
+    imgs = []
+    for file in glob(os.path.join(path, "*.*g")):
+        imgs.append(file)
+
+    imgs.sort()
+
+    for img in tqdm(imgs):
+        c.drawImage(img, 0, 0, width=210*mm, height=298*mm)
+        c.showPage()
+    del imgs
+
+    c.save()
 
 if __name__ == '__main__':
-    image_path = 'school.png'
-    add_image(image_path)
+    main()

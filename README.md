@@ -17,7 +17,8 @@ pip install -r requirements.txt
 To run create PDF file
 
 ```
-python run.py <directory-name>
+python run.py <directory-name> <filename>
 ```
 
-will create \<directory-name>.pdf in the active directory
+will create \<filename> in the active directory  
+Make sure to add .pdf in filename
