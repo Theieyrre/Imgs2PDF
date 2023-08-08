@@ -1,3 +1,5 @@
+![badge](https://img.shields.io/static/v1?label=CODE&message=RUNNING&color=green&style=for-the-badge&logo=appveyor)
+
 # Imgs2PDF
 
 Simple Python script to read multiple images in a directory to create a multi-page PDF file
