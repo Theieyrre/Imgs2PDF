@@ -2,13 +2,15 @@
 
 # Imgs2PDF
 
-Simple Python script to read multiple images in a directory to create a multi-page PDF file
+Simple Python script to read multiple images in a directory to create a multi-page PDF file  
+Images can be JPG, JPEG or PNG  
+Doesn't support recursive directories
 
 # How to use
 
 ## Requirements
 
-- Python
+- Python3.10+
 
 Run line below to install dependiencies
 
