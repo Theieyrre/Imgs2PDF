@@ -1,3 +1,4 @@
 /img2pdf
 *.pdf
 *.png
+*.pyc
