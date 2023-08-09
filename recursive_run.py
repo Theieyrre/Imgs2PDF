@@ -17,7 +17,7 @@ def main():
         merger.append(filename)
 
     main_file = main_dir.split("\\")[-1]
-    merger.write(main_file + ".pdf")
+    merger.write(save_dir + "\\" + main_file + ".pdf")
     merger.close()
 
 
