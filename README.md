@@ -26,3 +26,19 @@ python run.py <directory-name> <filename>
 
 will create \<filename> in the active directory  
 Make sure to add .pdf in filename
+
+If there are seperate directories use multi run
+
+```
+python multi_run.py <main-directory-name> <output-directory>
+```
+
+will create pdf file with name of each sub-directory in output-directory
+
+If nested directories exist run recursive_run
+
+```
+python recursive_run.py <main-directory-name> <output-directory>
+```
+
+will read nested directories, create and merge pdfs to crete \<main-directory-name>.pdf
